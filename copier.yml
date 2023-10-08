@@ -1,0 +1,16 @@
+# By default, copier uses the `copier.yml` directory as a template.
+# We want it to use the `template` subdirectory.
+_subdirectory: template
+
+project_name:
+  type: str
+  help: Project name
+
+python_project_name:
+  type: str
+  help: A Python-friendly name that can be used to import your project
+  default: "{{ project_name | lower | replace(' ', '_') | replace('-', '_') }}"
+  validator: >-
+    {% if not (python_project_name | regex_search('^[a-z][a-z0-9_]+$')) %}
+    python_project_name must start with a letter, followed one or more letters, digits or underscores all lowercase.
+    {% endif %}
