@@ -5,7 +5,6 @@ authors = [
   { name="{{ author_fullname }}", email="{{ author_email }}" },
 ]
 readme = "README.md"
-{# TODO: Make configurable? #}
 requires-python = ">= 3.9"
 license = { text = "{% if copyright_license == 'Apache-2.0' %}Apache License{% elif copyright_license == "MIT" %}MIT License{% elif copyright_license == "BSD" %}BSD 2-Clause License{% endif %}" }
 classifiers = [
@@ -18,7 +17,6 @@ classifiers = [
   "License :: OSI Approved :: MIT License",
   {%- endif %}
 ]
-{# TODO: Add dependencies section #}
 dyamic = ["version"]
 {% if project_homepage != "" or project_source_repository != "" or project_bug_tracker != "" %}
 [project.urls]
@@ -44,10 +42,7 @@ source = "vcs"
 [tool.hatch.build.hooks.vcs]
 version-file = "src/{{ python_project_name }}/_version.py"
 
-{# TODO: Add pytest ini importlib option #}
-
 [tool.black]
-{# TODO: Should this be a list or is minimum version enough like in ruff?#}
 target-version = ["py39"]
 line-length = 88
 
