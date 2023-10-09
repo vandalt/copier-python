@@ -6,13 +6,13 @@ requests, and pull requests.
 {% if project_homepage != "" or project_source_repository != "" or project_bug_tracker != "" %}
 Here is a list of important resources for contributors:
 
-{% if project_homepage %}
+{% if project_homepage -%}
 - [Homepage]({{ project_homepage }})
 {% endif -%}
-{% if project_source_repository %}
+{% if project_source_repository -%}
 - [Source Code]({{ project_source_repository }})
 {% endif -%}
-{% if project_bug_tracker %}
+{% if project_bug_tracker -%}
 - [Issue Tracker]({{ project_bug_tracker }})
 {% endif -%}
 {% endif %}
