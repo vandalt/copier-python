@@ -15,6 +15,9 @@ git = local["git"]
 @contextmanager
 def generate_project(**data):
     data["project_name"] = data.get("project_name", "example_project")
+    data["project_description"] =  data.get("project_description", "An example project")
+    data["author_fullname"] = data.get("author_fullname", "A Python Coder")
+    data["author_email"] = data.get("author_email", "coder@python.codes")
     with TemporaryDirectory() as project:
         with warnings.catch_warnings():
             warnings.simplefilter("ignore", DirtyLocalWarning)
