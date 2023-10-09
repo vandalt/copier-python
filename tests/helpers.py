@@ -27,7 +27,7 @@ def generate_project(**data):
             git("add", ".")
             git(
                 "commit",
-                "--mesage=test",
+                "--message=test",
                 "--author=Test<test@test>",
                 "--no-verify",
             )
