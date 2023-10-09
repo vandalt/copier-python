@@ -4,7 +4,60 @@ _subdirectory: template
 
 project_name:
   type: str
-  help: Project name
+  help: Your project's name
+
+project_description:
+  type: str
+  help: A short description of your project
+  default: ""
+
+author_fullname:
+  type: str
+  help: Your full name
+
+author_email:
+  type: str
+  help: Your email address
+
+project_homepage:
+  type: str
+  help: The URL for your project's homepage
+  default: ""
+
+project_source_repository:
+  type: str
+  help: The URL for your project's source repository
+
+project_bug_tracker:
+  type: str
+  help: The URL for your project's bug tracker
+  default: "{% if 'github.com' in project_source_repository %}{{ project_source_repository }}/issues{% else %}{% endif %}"
+
+copyright_holder:
+  type: str
+  help: The name of the person/entity holding the copyright
+  default: "{{ author_fullname }}"
+
+# TODO: Use jinja to get current year
+copyright_year:
+  type: str
+  help: The copyright year
+  default: "2023"
+
+# TODO: Use CLI license generation?
+copyright_license:
+  type: str
+  help: Your project's license
+  default: "MIT"
+  choices:
+    - "Apache-2.0"
+    - "MIT"
+    - "Other"
+
+coc_email:
+  type: str
+  help: The email contact for code of conduct inquiries
+  default: "{{ author_email }}"
 
 python_project_name:
   type: str
