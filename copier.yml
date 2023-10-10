@@ -27,7 +27,7 @@ project_homepage:
 project_source_repository:
   type: str
   help: The URL for your project's source repository
-  default: "https://github.com/vandalt/{{ project_name }}"
+  default: "https://github.com/vandalt/{{ project_name | replace(' ', '_') }}"
 
 project_bug_tracker:
   type: str
