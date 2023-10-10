@@ -22,6 +22,7 @@ release = {{ python_project_name }}.__version__
 
 html_theme = "sphinx_book_theme"
 html_title = "{{ project_name }}"
+exclude_patterns = ["_build"]
 html_theme_options = {
     "path_to_docs": "docs",{% if project_source_repository %}
     "repository_url": "{{ project_source_repository }}",
