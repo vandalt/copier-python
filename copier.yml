@@ -22,7 +22,7 @@ author_email:
 project_homepage:
   type: str
   help: The URL for your project's homepage
-  default: ""
+  default: "https://{{ project_name | replace(' ', '_') }}.readthedocs.io"
 
 project_source_repository:
   type: str
