@@ -58,3 +58,8 @@ exclude = []
 [tool.ruff.isort]
 known-first-party = ["{{ python_project_name }}"]
 combine-as-imports = true
+
+[tool.pytest.ini_options]
+addopts = [
+  "--import-mode=importlib",
+]
