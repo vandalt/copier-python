@@ -39,6 +39,11 @@ copyright_holder:
   help: The name of the person/entity holding the copyright
   default: "{{ author_fullname }}"
 
+copyright_email:
+  type: str
+  help: The email to put on the license
+  default: "{{ author_email }}"
+
 # TODO: Use jinja to get current year
 copyright_year:
   type: str
