@@ -20,11 +20,11 @@ def docs(session: nox.Session):
             "-W",
             "--keep-going",
             "-b",
-            "dirhtml",
+            "html",
             "-d",
             "_build/doctrees",
             "-D",
             "language=en",
             ".",
-            "_build/dirhtml",
+            "_build/html",
         )
